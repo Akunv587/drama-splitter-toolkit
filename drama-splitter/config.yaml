@@ -1,0 +1,29 @@
+# ── OCR 引擎 ──────────────────────────────────────────────────
+ocr_engine: rapidocr           # rapidocr | paddleocr
+
+# ── 抽帧参数 ──────────────────────────────────────────────────
+frame_interval_sec: 0.5        # 抽帧间隔（秒）
+frame_width: 640               # 抽帧缩放宽度（像素）
+
+# ── 裁剪参数 ──────────────────────────────────────────────────
+cut_mode: lossless             # lossless | reencode
+naming_template: "第{ep:02d}集.mp4"
+
+# ── 输出 ──────────────────────────────────────────────────────
+output_dir: ./output
+cleanup_frames: true           # OCR 完成后是否删除帧文件
+
+# ── 音频指纹 ──────────────────────────────────────────────────
+fingerprint_template_sec: 20   # 片头模板长度（秒）
+fingerprint_threshold: 0.85    # 指纹相似度阈值（0–1）
+
+# ── 黑帧静音检测 ──────────────────────────────────────────────
+black_duration: 0.3            # 黑帧最短持续时间（秒）
+black_pix_threshold: 0.10      # 黑帧像素阈值（0–1）
+silence_noise: -40dB           # 静音噪声阈值
+silence_duration: 0.3          # 静音最短持续时间（秒）
+
+# ── 融合参数 ──────────────────────────────────────────────────
+cluster_window_sec: 3.0        # 候选点聚类窗口（秒）
+min_episode_sec: 60            # 最短单集时长（秒）
+max_episode_sec: 300           # 最长单集时长（秒）

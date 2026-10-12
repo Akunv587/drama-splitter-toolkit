@@ -1,0 +1,57 @@
+# ===== 凭据 / 隐私 =====
+.env
+.env.*
+!.env.example
+cookies.txt
+*cookies*.txt
+secrets.*
+
+# ===== 运行产物 =====
+output/
+outputs/
+uploads/
+logs/
+*.log
+*.db
+*.sqlite*
+*.part
+*.mp4
+*.m4a
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.vtt
+*.srt
+frames/
+cache/
+.cache/
+
+# ===== 虚拟环境 / 依赖 =====
+venv/
+.venv/
+env/
+*.egg-info/
+.eggs/
+
+# ===== 构建产物 =====
+build/
+dist/
+*.spec.bak
+
+# ===== 缓存 / 测试 =====
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ===== IDE / 系统 =====
+.idea/
+.vscode/
+.qoder/
+*.swp
+.DS_Store
+Thumbs.db
